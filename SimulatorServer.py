@@ -12,8 +12,25 @@ import requests
 
 # THIS SCRIPT RUNS ON EC2 SERVER
 
+# def ClientThread(connection):
+#     # send welcome info
+#     connection.send(str.encode('Welcome to the server'))
+#     while True:
+#         ClientData = connection.recv(2048)
+#         reply = '---Server Reply---' 
+        
+#         # if no client data, stop connection
+#         if not ClientData:
+#             break
+        
+#         # else send all info 
+#         connection.sendall(str.encode(reply))        
+    
+#     # stop connection
+#     connection.close()
 
 
+# method that selects winner randomly from player list
 def SelectWinner(PlayerList):
     winner = random.choice(PlayerList)
     return winner
@@ -25,6 +42,7 @@ def RunServer():
     HOST = ''
     PORT = 12345
 
+    # 
     GETPLAYERAPI = 'https://1cvnfker3f.execute-api.ca-central-1.amazonaws.com/default/GetAllPlayerRows'
 
     # create connection
@@ -74,6 +92,7 @@ def RunServer():
 
 
 
+        # if populated 50 times, 
         counter = 0
         # populate room
         while len(Room) < 3:

@@ -9,11 +9,12 @@ def Varification(UserName):
     UserTable = dynamodb.Table('Players')
     
     TargetUser = UserTable.get_item(
-        Key={'user_id': UserName}
+        Key = {
+            'user_id': UserName
+        }
     )
     
     return 'Item' in TargetUser
-
 
 def UpdateWin(UserName):
     UserTable = dynamodb.Table('Players')
@@ -91,11 +92,19 @@ def lambda_handler(event, context):
     
     # user info
     Parameters = event['queryStringParameters']
-    # Parameters = {'user_id': 'sdfasdfasdfasdfasdf', 'lost': 'true'}
+    # Parameters = {'user_id': 'cccrizzz', 'lost': 'true'}
     
     # get player ID
     UserID = Parameters['user_id']
+
+
+    # return{
+    #     'statusCode':200,
+    #     'body': str(Varification(UserID))
+    # }
+
     
+
     # if player exist, update the player
     if Varification(UserID):
         for i in Parameters:
@@ -106,6 +115,7 @@ def lambda_handler(event, context):
                     'statusCode': 200,
                     'body': json.dumps('Win player info updated!')
                 }
+              
                 
             if i == 'lost':
                 UpdateLost(UserID)
@@ -114,6 +124,7 @@ def lambda_handler(event, context):
                     'statusCode': 200,
                     'body': json.dumps('Lost player info updated!')
                 }
+
     else:
         return {
             'statusCode': 404,

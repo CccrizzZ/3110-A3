@@ -6,6 +6,7 @@ import datetime
 import logging
 import requests
 import ast
+import time
 
 HOSTADDRESS = '3.96.203.122'
 PORT = 12345
@@ -26,9 +27,10 @@ IDList = [
 PlayerList = []
 
 def LogTimeToLogFile():
-    # display time
-    time = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
-    logging.info(time)
+    # display time in log file
+    CurrentTime = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+    logging.info(CurrentTime)
+
 
 
 
@@ -38,56 +40,67 @@ def MatchMakingSimulator():
     # config logging to log file
     logging.basicConfig(filename='MatchMaking.log', level=logging.INFO)
 
+    #  log time
+    LogTimeToLogFile()
+    
     # log simulator start
-    logging.info('Simulator Started')
+    logging.info('---Simulator Start---')
 
     # player info
     MyID = random.choice(IDList)
 
 
-    print("Connecting to server...")
     # connect to server
+    print("Connecting to server...")
     ServerSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     ServerSocket.connect((HOSTADDRESS, PORT))
-    print("Connected!")
+    print("---Connected!---")
+    print("Client ID is: " + MyID)
+    
+    
     
     # message for server 
     MessageToServer = MyID
 
-    # send client data to server
+
+    # send client ID to server
     ServerSocket.send(MyID.encode())
+
 
     # get response from server
     ServerResponse = ServerSocket.recv(1024)
-    print(ServerResponse)
-
-
-
-
-
     
-    # # add random player id to playerlist
-    # while len(PlayerList) < 3:
-    #     newPlayer = random.choice(IDList)
-        
-    #     if newPlayer in PlayerList:
-    #         pass
-    #     else:
-    #         PlayerList.append(newPlayer)
+    # print match result
+    # ResponseJSON = json.loads(ServerResponse
+    data = ServerResponse.decode('utf-8')
+    jsonData = json.loads(data)
+    
+    print(jsonData)
 
-    # print(PlayerList)
+    print("---Match Result---")
+    print("Win: ")
+    # print(data['winner'])
+    # print(jsonData['winner'])
+    print("Lost: ")
+    # print(data['losers'])
+    # print(jsonData['losers'])
+    
+    
+    
+    
+    
+    
+    
+    # log to log
+    LogTimeToLogFile()
+    logging.info(ServerResponse)
+    logging.info('---Simulator End---')
+    
+    
+    # end the simulator
+    print('---Simulator End---')
+    ServerSocket.close()
 
-    # while len(InGameIDList)<3:
-    #     newID = random.randint(1, 3)
-
-    #     # if id already exist, pass on
-    #     # else append to game ID array
-    #     if newID in InGameIDList:
-    #         pass
-    #     else:
-    #         InGameIDList.append(newID)
-            
-        
     
 
 
@@ -95,7 +108,10 @@ def MatchMakingSimulator():
 
 
 if __name__ == '__main__':
-    MatchMakingSimulator()
+    RoundsInput = input("Enter number of matches: ")
+    
+    for i in range(int(RoundsInput)):
+        MatchMakingSimulator()
 
 
 
