@@ -1,0 +1,25 @@
+{
+    'databefore': [
+        {'user_id': 'cccrizzz', 'loss': 31, 'matches': 45, 'wins': 14}, 
+        {'user_id': 'mike', 'loss': 27, 'matches': 35, 'wins': 8}, 
+        {'user_id': 'telmuun', 'loss': 28, 'matches': 50, 'wins': 22}
+        ],
+    'dataafter': [
+        {'user_id': 'mike', 'loss': 27, 'matches': 35, 'wins': 8}, 
+        {'user_id': 'cccrizzz', 'loss': 31, 'matches': 45, 'wins': 14}, 
+        {'user_id': 'telmuun', 'loss': 28, 'matches': 50, 'wins': 22}
+    ],
+    'winner': {'user_id': 'telmuun', 'loss': 28, 'matches': 50, 'wins': 22}, 
+    'losers': [
+        {'user_id': 'telmuun', 'loss': 26, 'matches': 47, 'wins': 21}, 
+        {'user_id': 'bot3', 'loss': 25, 'wins': 8, 'matches': 33}, 
+        {'user_id': 'cccrizzz', 'loss': 29, 'matches': 43, 'wins': 14}, 
+        {'user_id': 'mike', 'loss': 25, 'matches': 33, 'wins': 8}, 
+        {'user_id': 'mike', 'loss': 26, 'matches': 34, 'wins': 8}, 
+        {'user_id': 'telmuun', 'loss': 27, 'matches': 48, 'wins': 21}, 
+        {'user_id': 'cccrizzz', 'loss': 30, 'matches': 44, 'wins': 14},
+        {'user_id': 'bot3', 'loss': 26, 'wins': 9, 'matches': 35}, 
+        {'user_id': 'cccrizzz', 'loss': 31, 'matches': 45, 'wins': 14}, 
+        {'user_id': 'mike', 'loss': 27, 'matches': 35, 'wins': 8}
+    ]
+}

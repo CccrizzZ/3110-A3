@@ -7,11 +7,13 @@ import logging
 import requests
 import ast
 import time
+import pickle
 
 HOSTADDRESS = '3.96.203.122'
 PORT = 12345
 
 GETPLAYERAPI = 'https://1cvnfker3f.execute-api.ca-central-1.amazonaws.com/default/GetAllPlayerRows'
+UPDATEPLAYERAPI = 'https://c7h5euch21.execute-api.ca-central-1.amazonaws.com/default/UpdatePlayer'
 
 
 # list for all player user name in DB
@@ -69,32 +71,72 @@ def MatchMakingSimulator():
 
     # get response from server
     ServerResponse = ServerSocket.recv(1024)
-    
-    # print match result
-    # ResponseJSON = json.loads(ServerResponse
-    data = ServerResponse.decode('utf-8')
-    jsonData = json.loads(data)
-    
-    print(jsonData)
+    decodeResponse = ServerResponse.decode()
 
-    print("---Match Result---")
-    print("Win: ")
-    # print(data['winner'])
-    # print(jsonData['winner'])
-    print("Lost: ")
-    # print(data['losers'])
-    # print(jsonData['losers'])
-    
-    
-    
-    
-    
-    
-    
-    # log to log
-    LogTimeToLogFile()
-    logging.info(ServerResponse)
-    logging.info('---Simulator End---')
+
+    if decodeResponse=='------match not found!------':
+        print(decodeResponse)
+        # log to log
+        LogTimeToLogFile()
+        logging.info(decodeResponse)
+        logging.info('---Simulator End---')
+    else:
+        p1 = json.loads(decodeResponse)['1']
+        p2 = json.loads(decodeResponse)['2']
+        p3 = json.loads(decodeResponse)['3']
+        
+        LocalGame = []
+        
+        # get player table from DB
+        LabmdaResponse = requests.get(GETPLAYERAPI)
+        AllPlayersList = LabmdaResponse.json()['Items']
+        
+        for item in AllPlayersList:
+            if item['user_id'] == p1:
+                LocalGame.append(item)
+            if item['user_id'] == p2:
+                LocalGame.append(item)
+            if item['user_id'] == p3:
+                LocalGame.append(item)
+                
+        print("----------Match Found----------")
+        print("---Players data before match---")
+        logging.info("---Players data before match---")
+        
+        for player in LocalGame:
+            print(player)
+            logging.info(player)
+
+        
+
+        SelectWinner(LocalGame)
+
+        afterMatch = []
+        LabmdaResponse = requests.get(GETPLAYERAPI)
+        AllPlayersList = LabmdaResponse.json()['Items']
+        
+        for item in AllPlayersList:
+            if item['user_id'] == p1:
+                afterMatch.append(item)
+            if item['user_id'] == p2:
+                afterMatch.append(item)
+            if item['user_id'] == p3:
+                afterMatch.append(item)
+        
+        print("---Match Result---")
+        logging.info('---Match Result---')
+        
+        for player in afterMatch:
+            print(player)
+            logging.info(player)
+        
+        
+        
+        
+        
+        # log to log
+        LogTimeToLogFile()  
+        logging.info('---Simulator End---')
     
     
     # end the simulator
@@ -104,6 +146,43 @@ def MatchMakingSimulator():
     
 
 
+
+
+def SelectWinner(PlayerList):
+
+    # pick random player from player list
+    Winner = random.choice(PlayerList)
+    
+    Losers = []
+
+    for player in PlayerList:
+
+        if player['user_id'] == Winner['user_id']:
+            # update winner info
+            requests.get(
+                UPDATEPLAYERAPI,
+                params = {
+                    'user_id': player['user_id'], 
+                    'win': 'true'
+                }
+            )
+            print(player['user_id'] + " :Win")
+
+        else:
+            # update loser info
+            requests.get(
+                UPDATEPLAYERAPI,
+                params = {
+                    'user_id': player['user_id'], 
+                    'lost': 'true'
+                }
+            )
+            Losers.append(player)
+            print(player['user_id'] + " :Lost")
+    print("----------------")
+    print("Winner:")
+    print(Winner['user_id'])
+    print("----------------")
 
 
 

@@ -1,223 +1,53 @@
-INFO:root:2020-11-21 22:36:06
+INFO:root:2020-11-23 00:49:03
 INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:36:11
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:36:23
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:38:48
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:20
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:21
-INFO:root:b'{"winner": {"user_id": "telmuun", "loss": 15, "matches": 24, "wins": 9}, "losers": [{"user_id": "tony", "loss": 20, "matches": 31, "wins": 11}, {"user_id": "mike", "loss": 16, "matches": 21, "wins": 5}]}'
+INFO:root:---Players data before match---
+INFO:root:{'user_id': 'mike', 'loss': 28, 'matches': 36, 'wins': 8}
+INFO:root:{'user_id': 'tony', 'loss': 40, 'matches': 62, 'wins': 22}
+INFO:root:{'user_id': 'telmuun', 'loss': 30, 'matches': 56, 'wins': 26}
+INFO:root:---Match Result---
+INFO:root:{'user_id': 'mike', 'loss': 28, 'matches': 37, 'wins': 9}
+INFO:root:{'user_id': 'tony', 'loss': 41, 'matches': 63, 'wins': 22}
+INFO:root:{'user_id': 'telmuun', 'loss': 31, 'matches': 57, 'wins': 26}
+INFO:root:2020-11-23 00:49:10
 INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:41:21
+INFO:root:2020-11-23 00:49:10
 INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:22
-INFO:root:b'{"winner": {"user_id": "telmuun", "loss": 15, "matches": 25, "wins": 10}, "losers": [{"user_id": "tony", "loss": 21, "matches": 32, "wins": 11}, {"user_id": "bot3", "loss": 8, "wins": 7, "matches": 15}]}'
+INFO:root:2020-11-23 00:49:10
+INFO:root:------match not found!------
 INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:41:27
+INFO:root:2020-11-23 00:49:27
 INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:28
-INFO:root:b'{"winner": {"user_id": "telmuun", "loss": 15, "matches": 26, "wins": 11}, "losers": [{"user_id": "bot2", "loss": 5, "wins": 6, "matches": 11}, {"user_id": "bot3", "loss": 9, "wins": 7, "matches": 16}]}'
+INFO:root:---Players data before match---
+INFO:root:{'user_id': 'mike', 'loss': 28, 'matches': 37, 'wins': 9}
+INFO:root:{'user_id': 'cccrizzz', 'loss': 36, 'matches': 50, 'wins': 14}
+INFO:root:{'user_id': 'bot3', 'loss': 30, 'wins': 12, 'matches': 42}
+INFO:root:---Match Result---
+INFO:root:{'user_id': 'mike', 'loss': 28, 'matches': 38, 'wins': 10}
+INFO:root:{'user_id': 'cccrizzz', 'loss': 37, 'matches': 51, 'wins': 14}
+INFO:root:{'user_id': 'bot3', 'loss': 31, 'wins': 12, 'matches': 43}
+INFO:root:2020-11-23 00:49:34
 INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:41:28
+INFO:root:2020-11-23 00:49:34
 INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:29
-INFO:root:b'{"winner": {"user_id": "telmuun", "loss": 15, "matches": 27, "wins": 12}, "losers": [{"user_id": "cccrizzz", "loss": 13, "matches": 20, "wins": 7}, {"user_id": "bot3", "loss": 10, "wins": 7, "matches": 17}]}'
+INFO:root:---Players data before match---
+INFO:root:{'user_id': 'mike', 'loss': 28, 'matches': 38, 'wins': 10}
+INFO:root:{'user_id': 'cccrizzz', 'loss': 37, 'matches': 51, 'wins': 14}
+INFO:root:{'user_id': 'tony', 'loss': 41, 'matches': 63, 'wins': 22}
+INFO:root:---Match Result---
+INFO:root:{'user_id': 'mike', 'loss': 29, 'matches': 39, 'wins': 10}
+INFO:root:{'user_id': 'cccrizzz', 'loss': 38, 'matches': 52, 'wins': 14}
+INFO:root:{'user_id': 'tony', 'loss': 41, 'matches': 64, 'wins': 23}
+INFO:root:2020-11-23 00:49:40
 INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:41:37
+INFO:root:2020-11-23 00:49:40
 INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:39
-INFO:root:b'{"winner": {"user_id": "mike", "loss": 17, "matches": 22, "wins": 5}, "losers": [{"user_id": "cccrizzz", "loss": 14, "matches": 21, "wins": 7}, {"user_id": "tony", "loss": 22, "matches": 33, "wins": 11}]}'
+INFO:root:---Players data before match---
+INFO:root:{'user_id': 'cccrizzz', 'loss': 38, 'matches': 52, 'wins': 14}
+INFO:root:{'user_id': 'tony', 'loss': 41, 'matches': 64, 'wins': 23}
+INFO:root:{'user_id': 'telmuun', 'loss': 31, 'matches': 57, 'wins': 26}
+INFO:root:---Match Result---
+INFO:root:{'user_id': 'cccrizzz', 'loss': 39, 'matches': 53, 'wins': 14}
+INFO:root:{'user_id': 'tony', 'loss': 41, 'matches': 65, 'wins': 24}
+INFO:root:{'user_id': 'telmuun', 'loss': 32, 'matches': 58, 'wins': 26}
+INFO:root:2020-11-23 00:49:46
 INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:41:39
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:50
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:41:56
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:42:26
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:43:02
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:43:03
-INFO:root:b'{"winner": {"user_id": "telmuun", "loss": 15, "matches": 28, "wins": 13}, "losers": [{"user_id": "tony", "loss": 23, "matches": 34, "wins": 11}, {"user_id": "bot3", "loss": 11, "wins": 7, "matches": 18}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:43:03
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:43:15
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:43:16
-INFO:root:b'{"winner": {"user_id": "bot2", "loss": 6, "wins": 6, "matches": 12}, "losers": [{"user_id": "telmuun", "loss": 15, "matches": 29, "wins": 14}, {"user_id": "tony", "loss": 24, "matches": 35, "wins": 11}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:43:16
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:43:17
-INFO:root:b'{"winner": {"user_id": "bot2", "loss": 6, "wins": 7, "matches": 13}, "losers": [{"user_id": "telmuun", "loss": 16, "matches": 30, "wins": 14}, {"user_id": "bot3", "loss": 12, "wins": 7, "matches": 19}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:43:17
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:43:18
-INFO:root:b'{"winner": {"user_id": "cccrizzz", "loss": 15, "matches": 22, "wins": 7}, "losers": [{"user_id": "tony", "loss": 25, "matches": 36, "wins": 11}, {"user_id": "mike", "loss": 17, "matches": 23, "wins": 6}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:43:18
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:46:15
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:51:21
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:51:25
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:51:27
-INFO:root:b'{"winner": {"user_id": "mike", "loss": 18, "matches": 24, "wins": 6}, "losers": [{"user_id": "telmuun", "loss": 17, "matches": 31, "wins": 14}, {"user_id": "bot3", "loss": 13, "wins": 7, "matches": 20}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:51:33
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:52:05
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:52:06
-INFO:root:b'{"winner": {"user_id": "tony", "loss": 26, "matches": 37, "wins": 11}, "losers": [{"user_id": "bot3", "loss": 14, "wins": 7, "matches": 21}, {"user_id": "mike", "loss": 18, "matches": 25, "wins": 7}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:52:06
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:52:07
-INFO:root:b'------match not found!------'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:52:15
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:52:15
-INFO:root:b'------match not found!------'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:52:15
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:52:16
-INFO:root:b'{"winner": {"user_id": "cccrizzz", "loss": 15, "matches": 23, "wins": 8}, "losers": [{"user_id": "mike", "loss": 19, "matches": 26, "wins": 7}, {"user_id": "bot3", "loss": 15, "wins": 7, "matches": 22}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:54:26
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:54:27
-INFO:root:b'{"winner": {"user_id": "tony", "loss": 26, "matches": 38, "wins": 12}, "losers": [{"user_id": "cccrizzz", "loss": 15, "matches": 24, "wins": 9}, {"user_id": "bot3", "loss": 16, "wins": 7, "matches": 23}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:54:27
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:54:28
-INFO:root:b'------match not found!------'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:54:34
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:54:35
-INFO:root:b'{"winner": {"user_id": "bot3", "loss": 17, "wins": 7, "matches": 24}, "losers": [{"user_id": "telmuun", "loss": 18, "matches": 32, "wins": 14}, {"user_id": "tony", "loss": 26, "matches": 39, "wins": 13}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:54:35
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:54:36
-INFO:root:b'{"winner": {"user_id": "telmuun", "loss": 19, "matches": 33, "wins": 14}, "losers": [{"user_id": "mike", "loss": 20, "matches": 27, "wins": 7}, {"user_id": "cccrizzz", "loss": 16, "matches": 25, "wins": 9}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:54:44
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:54:44
-INFO:root:b'------match not found!------'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:54:44
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:54:45
-INFO:root:b'{"winner": {"user_id": "tony", "loss": 27, "matches": 40, "wins": 13}, "losers": [{"user_id": "bot3", "loss": 17, "wins": 8, "matches": 25}, {"user_id": "mike", "loss": 21, "matches": 28, "wins": 7}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:56:37
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:56:38
-INFO:root:b'------match not found!------'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:56:38
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:56:39
-INFO:root:b'{"winner": {"user_id": "telmuun", "loss": 19, "matches": 34, "wins": 15}, "losers": [{"user_id": "tony", "loss": 27, "matches": 41, "wins": 14}, {"user_id": "mike", "loss": 22, "matches": 29, "wins": 7}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:57:21
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:58:56
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:58:57
-INFO:root:b'------match not found!------'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 22:58:57
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 22:58:57
-INFO:root:b'------match not found!------'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:00:27
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:00:28
-INFO:root:b'{"winner": {"user_id": "tony", "loss": 28, "matches": 42, "wins": 14}, "losers": [{"user_id": "telmuun", "loss": 19, "matches": 36, "wins": 17}, {"user_id": "cccrizzz", "loss": 18, "matches": 27, "wins": 9}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:00:28
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:06:34
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:06:36
-INFO:root:b'{"winner": {"user_id": "cccrizzz", "loss": 19, "matches": 28, "wins": 9}, "losers": [{"user_id": "bot3", "loss": 18, "wins": 8, "matches": 26}, {"user_id": "mike", "loss": 23, "matches": 30, "wins": 7}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:06:36
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:06:53
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:06:54
-INFO:root:b'{"winner": {"user_id": "cccrizzz", "loss": 19, "matches": 29, "wins": 10}, "losers": [{"user_id": "tony", "loss": 28, "matches": 43, "wins": 15}, {"user_id": "telmuun", "loss": 20, "matches": 37, "wins": 17}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:06:54
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:06:55
-INFO:root:b'{"winner": {"user_id": "cccrizzz", "loss": 19, "matches": 30, "wins": 11}, "losers": [{"user_id": "telmuun", "loss": 21, "matches": 38, "wins": 17}, {"user_id": "tony", "loss": 29, "matches": 44, "wins": 15}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:20:28
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:20:34
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:21:53
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:22:00
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:23:12
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:23:16
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:28:10
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:28:14
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:28:16
-INFO:root:b'{"databefore": [], "dataafter": [], "winner": {"user_id": "tony", "loss": 31, "matches": 47, "wins": 16}, "losers": [{"user_id": "bot2", "loss": 8, "wins": 8, "matches": 16}, {"user_id": "bot3", "loss": 20, "wins": 8, "matches": 28}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:28:16
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:30:57
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:31:02
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:31:04
-INFO:root:b'{"databefore": [{"user_id": "tony", "loss": 31, "matches": 48, "wins": 17}, {"user_id": "cccrizzz", "loss": 20, "matches": 33, "wins": 13}, {"user_id": "bot3", "loss": 21, "wins": 8, "matches": 29}], "dataafter": [{"user_id": "cccrizzz", "loss": 20, "matches": 33, "wins": 13}, {"user_id": "bot3", "loss": 21, "wins": 8, "matches": 29}, {"user_id": "tony", "loss": 31, "matches": 48, "wins": 17}], "winner": {"user_id": "tony", "loss": 31, "matches": 48, "wins": 17}, "losers": [{"user_id": "cccrizzz", "loss": 20, "matches": 33, "wins": 13}, {"user_id": "bot3", "loss": 21, "wins": 8, "matches": 29}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:31:04
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:31:05
-INFO:root:b'{"databefore": [{"user_id": "cccrizzz", "loss": 21, "matches": 34, "wins": 13}, {"user_id": "tony", "loss": 31, "matches": 49, "wins": 18}, {"user_id": "bot2", "loss": 9, "wins": 8, "matches": 17}], "dataafter": [{"user_id": "bot2", "loss": 9, "wins": 8, "matches": 17}, {"user_id": "cccrizzz", "loss": 21, "matches": 34, "wins": 13}, {"user_id": "tony", "loss": 31, "matches": 49, "wins": 18}], "winner": {"user_id": "cccrizzz", "loss": 21, "matches": 34, "wins": 13}, "losers": [{"user_id": "cccrizzz", "loss": 20, "matches": 33, "wins": 13}, {"user_id": "bot3", "loss": 21, "wins": 8, "matches": 29}, {"user_id": "tony", "loss": 31, "matches": 49, "wins": 18}, {"user_id": "bot2", "loss": 9, "wins": 8, "matches": 17}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:31:56
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:32:02
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:32:03
-INFO:root:b'{"databefore": [{"user_id": "tony", "loss": 32, "matches": 50, "wins": 18}, {"user_id": "bot2", "loss": 10, "wins": 8, "matches": 18}, {"user_id": "bot3", "loss": 22, "wins": 8, "matches": 30}], "dataafter": [{"user_id": "bot2", "loss": 10, "wins": 8, "matches": 18}, {"user_id": "bot3", "loss": 22, "wins": 8, "matches": 30}, {"user_id": "tony", "loss": 32, "matches": 50, "wins": 18}], "winner": {"user_id": "bot2", "loss": 10, "wins": 8, "matches": 18}, "losers": [{"user_id": "cccrizzz", "loss": 20, "matches": 33, "wins": 13}, {"user_id": "bot3", "loss": 21, "wins": 8, "matches": 29}, {"user_id": "tony", "loss": 31, "matches": 49, "wins": 18}, {"user_id": "bot2", "loss": 9, "wins": 8, "matches": 17}, {"user_id": "tony", "loss": 32, "matches": 50, "wins": 18}, {"user_id": "bot3", "loss": 22, "wins": 8, "matches": 30}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-21 23:32:03
-INFO:root:---Simulator Start---
-INFO:root:2020-11-21 23:32:04
-INFO:root:b'{"databefore": [{"user_id": "cccrizzz", "loss": 21, "matches": 35, "wins": 14}, {"user_id": "mike", "loss": 24, "matches": 31, "wins": 7}, {"user_id": "bot2", "loss": 10, "wins": 9, "matches": 19}], "dataafter": [{"user_id": "mike", "loss": 24, "matches": 31, "wins": 7}, {"user_id": "bot2", "loss": 10, "wins": 9, "matches": 19}, {"user_id": "cccrizzz", "loss": 21, "matches": 35, "wins": 14}], "winner": {"user_id": "bot2", "loss": 10, "wins": 9, "matches": 19}, "losers": [{"user_id": "cccrizzz", "loss": 20, "matches": 33, "wins": 13}, {"user_id": "bot3", "loss": 21, "wins": 8, "matches": 29}, {"user_id": "tony", "loss": 31, "matches": 49, "wins": 18}, {"user_id": "bot2", "loss": 9, "wins": 8, "matches": 17}, {"user_id": "tony", "loss": 32, "matches": 50, "wins": 18}, {"user_id": "bot3", "loss": 22, "wins": 8, "matches": 30}, {"user_id": "cccrizzz", "loss": 21, "matches": 35, "wins": 14}, {"user_id": "mike", "loss": 24, "matches": 31, "wins": 7}]}'
-INFO:root:---Simulator End---
-INFO:root:2020-11-22 20:07:38
-INFO:root:---Simulator Start---
-INFO:root:2020-11-22 20:28:09
-INFO:root:---Simulator Start---
-INFO:root:2020-11-22 20:28:13
-INFO:root:---Simulator Start---
