@@ -9,41 +9,23 @@ import threading
 from operator import itemgetter
 import json
 import requests
-
-# THIS SCRIPT RUNS ON EC2 SERVER
-
-# def ClientThread(connection):
-#     # send welcome info
-#     connection.send(str.encode('Welcome to the server'))
-#     while True:
-#         ClientData = connection.recv(2048)
-#         reply = '---Server Reply---' 
-        
-#         # if no client data, stop connection
-#         if not ClientData:
-#             break
-        
-#         # else send all info 
-#         connection.sendall(str.encode(reply))        
-    
-#     # stop connection
-#     connection.close()
+import pickle
 
 
-# method that selects winner randomly from player list
-def SelectWinner(PlayerList):
-    winner = random.choice(PlayerList)
-    return winner
+
+HOST = ''
+PORT = 12345
+
+GETPLAYERAPI = 'https://1cvnfker3f.execute-api.ca-central-1.amazonaws.com/default/GetAllPlayerRows'
+UPDATEPLAYERAPI = 'https://c7h5euch21.execute-api.ca-central-1.amazonaws.com/default/UpdatePlayer'
+
+Losers = []
+
+
+
 
 
 def RunServer():
-
-
-    HOST = ''
-    PORT = 12345
-
-    # 
-    GETPLAYERAPI = 'https://1cvnfker3f.execute-api.ca-central-1.amazonaws.com/default/GetAllPlayerRows'
 
     # create connection
     Myserver = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
@@ -63,24 +45,30 @@ def RunServer():
         Myserver.listen()
         conn, addr = Myserver.accept()
 
+        
         print("PlayerConnected!")
 
         # receive client user name
         ClientPlayerID = conn.recv(1024).decode("ascii")
 
-        # get player table
+        # get player table from DB
         LabmdaResponse = requests.get(GETPLAYERAPI)
         AllPlayersList = LabmdaResponse.json()['Items']
 
 
         # room to populate
         Room = [] 
-        
-        # get requesting player
+
+
+
+
+        # get requesting player from the player DB
         for item in AllPlayersList:
             if item['user_id'] == ClientPlayerID:
                 RequestingPlyer = item
                 Room.append(RequestingPlyer)
+
+
 
         # calculate requesting player win loss ratio
         if RequestingPlyer['matches'] <= 4:
@@ -88,14 +76,22 @@ def RunServer():
         else:
             RequestingPlyerWinLossRatio = RequestingPlyer['wins'] / RequestingPlyer['loss']
 
+
+
+
+
+        RequestingPlyerID = RequestingPlyer['user_id']
+        print("Requsting Player:")
         print(RequestingPlyer)
 
 
 
-        # if populated 50 times, 
+
         counter = 0
+        MatchFound = False;
         # populate room
         while len(Room) < 3:
+            # get random player from the player db
             RandomPlayer = random.choice(AllPlayersList)
             
             # calculate win loss ratio
@@ -104,42 +100,40 @@ def RunServer():
             else:
                 RandomPlayerWinLossRatio = RandomPlayer['wins'] / RandomPlayer['loss']
             
-
+            # if win/loss ratio similar, add to room
             if abs(RequestingPlyerWinLossRatio - RandomPlayerWinLossRatio) <= 0.5 and RandomPlayer not in Room:
-            # if abs(RandomPlayer['matches'] - RequestingPlyer['matches']) <= 8 and RandomPlayer not in Room:
                 Room.append(RandomPlayer)
 
             else:
-                print('pass')
+                print('searching for match...')
                 counter += 1
                 if counter>=50:
-                    msg = "match not found!"
+                    msg = "------match not found!------"
                     conn.sendall(msg.encode())
                     print("match not found!!")
                     break;
 
-        print(Room)
 
-        
+        DataBeforeMatch = []
+        DataAfterMatch = []
+
+        if len(Room) == 3:
+            # data = pickle.dumps(Room)
+            # for player in Room:
+            
+            pdata = {
+                "1": Room[0]['user_id'],
+                "2": Room[1]['user_id'],
+                "3": Room[2]['user_id']
+            }
+
+            data = json.dumps(pdata)
+            conn.sendall(data.encode())
+                
 
 
-        # update server every 1 second
-        time.sleep(1)
-        print("ServerUpdated!")
+    
 
-
-        
-
-
-        
-
-        # response = "OK"
-
-        # if ClientData:
-        #     conn.sendall(response.encode())
-        #     print(ClientData.decode("ascii"))
-        # else:
-        #     break;
 
 
 if __name__ == '__main__':
